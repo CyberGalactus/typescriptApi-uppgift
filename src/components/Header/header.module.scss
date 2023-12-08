@@ -1,0 +1,38 @@
+@import '../../App.scss';
+
+.header {
+    @include flexbox;
+    @include header-style(true, #fd34e1);
+
+    padding: $indent__l;
+
+    &__logo,
+    &__account {
+        flex: 0 0 15%
+    }
+
+    &__logo {
+        @include responsive-mobile {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: $font-size__xl;
+        font-family: $font-russo;
+        // font: {
+        //     font-size: $font-size__xl;
+        //     font-family: $font-russo;
+        // } nested from css, så kan man också göra
+    }
+    
+
+    &__account {
+        font-size: $font-size__m;
+        font-family: $font-montserrat;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

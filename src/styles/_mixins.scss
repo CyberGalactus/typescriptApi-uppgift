@@ -1,0 +1,43 @@
+@mixin flexbox ($direction: row) {
+    align-items: center;
+    flex-direction: $direction;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin button-style($color: red) {
+    border: {
+        color: $color;
+        radius: 10px;
+        style: solid;
+        width: 2px;
+    }
+
+    background: lighten($color, 45%);
+    color: $color;
+    padding: $indent__base $indent__l;
+}
+
+@mixin header-style($border: false, $color: red) {
+    @if $border {
+        border: {
+            color: $color;
+            radius: 10px;
+            style: solid;
+            width: 1px;
+        }
+    } @else {
+        background-color: $color;
+    }
+}
+
+@mixin pokemon-background ($color: green) {
+    background: $color; // radial-gradient(complement($color), $color);
+        border-radius: 50%;
+}
+
+@mixin responsive-mobile {
+    @media screen and (max-width: $screen-mobile) {
+        @content;
+    }
+}

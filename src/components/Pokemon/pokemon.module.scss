@@ -1,0 +1,62 @@
+@import '../../App.scss';
+
+.pokemon {
+    @include flexbox(column);
+    padding: $indent__l;
+
+    &__name {
+        font: {
+            family: $font-montserrat;
+            size: $font-size__l; 
+        }
+        text-transform: capitalize;
+    }
+
+    &__image {
+        @include pokemon-background;
+        &--img {
+            height: 250px
+        }
+    }
+
+    &__type {
+        display: inline-block;
+        text-transform: capitalize;
+
+        p {
+            padding: 0 $indent__s;
+        }
+    }
+
+    &__actions {
+        text-align: center;
+    
+        &--button {
+            @include button-style(rgb(250, 90, 4));
+            cursor: pointer
+        }
+    }
+
+    // här testar jag själv?
+    &__buddy{
+        font: {
+            family: $font-russo;
+            size: $font-size__s;
+        }
+        cursor: pointer;
+        @include button-style(rgb(204, 45, 5));
+    }
+}
+
+@each $key, $color in $colors {
+    .pokemon__type--#{$key} {
+        color: #{$color};
+    }
+}
+
+@each $key, $color in $colors {
+    .pokemon__image--#{$key} {
+        @debug $color;
+        @include pokemon-background($color)
+    }
+}

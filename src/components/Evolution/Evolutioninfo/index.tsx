@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../evolution.module.scss'
+import styles from '../evolution.module.scss';
 
 interface Ability {
   ability: {

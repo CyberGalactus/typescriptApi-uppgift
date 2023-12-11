@@ -17,8 +17,8 @@ interface Stat {
 interface PokemonData {
   name: string;
   id: number;
-  abilities: Ability[];
-  stats: Stat[];
+  abilities?: Ability[];
+  stats?: Stat[];
 }
 
 interface PokeinfoProps {
@@ -38,14 +38,14 @@ const Evolutioninfo: React.FC<PokeinfoProps> = ({ data }) => {
             alt=""
           />
           <div className={styles.abilities}>
-            {data.abilities.map((poke) => (
+            {data.abilities?.map((poke) => (
               <div key={poke.ability.name} className={styles.group}>
                 <h2>{poke.ability.name}</h2>
               </div>
             ))}
           </div>
           <div className={styles.basestat}>
-            {data.stats.map((poke) => (
+            {data.stats?.map((poke) => (
               <h3 key={poke.stat.name}>
                 {poke.stat.name}:{poke.base_stat}
               </h3>

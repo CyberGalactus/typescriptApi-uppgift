@@ -1,6 +1,6 @@
-import { useContext, useState } from "react"
+import { useContext,} from "react"
 import styles from './pokemon.module.scss'
-import { BuddyContextType, PokemonContextType, PokemonType } from "../../utils/types"
+import { BuddyContextType, PokemonContextType,} from "../../utils/types"
 import { BuddyContext, PokemonContext } from "../../utils/contexts"
 
 const Pokemon = () => {

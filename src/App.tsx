@@ -4,8 +4,7 @@ import './App.scss';
 import Home from './pages/Home';
 import About from './pages/About';
 import PokemonPage from './pages/PokemonPage';
-import Ash from "./pages/Ash";
-import Pokedex from "./pages/Pokedex";
+import EvolutionPage from './pages/EvolutionPage'
 import FileNotFound from './pages/FileNotFound';
 import Layout from './pages/Layout';
 import { PokemonType } from './utils/types';
@@ -24,8 +23,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/pokemon" element={<PokemonPage />} />
-            <Route path="/ash" element={<Ash />} />
-            <Route path="/pokedex" element={<Pokedex />} />
+            <Route path="/evolution" element={<EvolutionPage />} />
             <Route path="/*" element={<FileNotFound />} />
           </Route>  
         </Routes>

@@ -1,0 +1,87 @@
+@import '../../App.scss';
+
+
+
+    .leftcontent,
+    .rightcontent {
+        flex-basis: 50%;
+    }
+
+    .leftcontent {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+        grid-gap: 5rem;
+
+        .card {
+            width: 270px;
+            background-color: #9EDEF9;
+            border-radius: 1rem;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+    }
+
+
+.rightcontent {
+    width: 50%;
+    text-align: center;
+    color: black;
+    top: 100px;
+    right: 10px;
+
+    img {
+        margin: 1.5rem;
+        height: 160px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+}
+
+.abilities {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    .group {
+        background-color: #b74555;
+        color: white;
+        padding: 0.5rem;
+        font-size: 12px;
+        border-radius: 8px;
+        margin-left: 1rem;
+    }
+}
+
+.basestat {
+    margin-top: 2rem;
+}
+
+.btngroup {
+    display: flex;
+
+    button {
+        outline: none;
+        border: none;
+        width: 150px;
+        padding: 0.3rem 0;
+        margin: 1rem;
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+        background-color: #b74555;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}

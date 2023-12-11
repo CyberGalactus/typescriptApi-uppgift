@@ -1,179 +1,13 @@
-// @import '../../App.scss';
-
-// .menu {
-//     padding: $indent__base;
-//     height: 87px;
-//     width: 100%;
-    
-    
-//     font: {
-//         family: $font-montserrat;
-//         size: $font-size__m;
-//     }
-    
-//     &__home {
-//         display: inline-block;
-//         position: relative;
-//         text-decoration: none;
-//         color: black;
-
-//         &:hover {
-//             color: white;
-//             background-color: #919191;
-//         }
-             
-//         &::after {
-//             content: '';
-//             position: absolute;
-//             left: 0;
-//             bottom: -8px; // Justera detta värde för att ändra avståndet mellan text och linje
-//             width: 100%;
-//             height: 10px; // Höjden på den liggande linjen
-//             background-color: #919191;
-//             transform: scaleX(0); // För att initialt gömma linjen
-//             transform-origin: bottom right;
-//             transition: transform 0.9s ease; // Gör övergången smidig
-//         }
-        
-//         &:hover::after {
-//             transform: scaleX(1); // Visa linjen vid hover
-//             transform-origin: bottom left;
-//         }
-//     }
-            
-//     &__about {
-//         display: inline-block;
-//         position: relative;
-//         text-decoration: none;
-//         color: black;
-
-//         &:hover {
-//             color: white;
-//             background-color: #e3350d;
-//         }
-                        
-//         &::after {
-//             content: '';
-//             position: absolute;
-//             left: 0;
-//             bottom: -8px; // Justera detta värde för att ändra avståndet mellan text och linje
-//             width: 100%;
-//             height: 10px; // Höjden på den liggande linjen
-//             background-color: #e3350d;
-//             transform: scaleX(0); // För att initialt gömma linjen
-//             transform-origin: bottom right;
-//             transition: transform 0.9s ease; // Gör övergången smidig
-//         }
-
-//         &:hover::after {
-//             transform: scaleX(1); // Visa linjen vid hover
-//             transform-origin: bottom left;
-//         }
-//     }
-
-//     &__pokemon {
-//         display: inline-block;
-//         position: relative;
-//         text-decoration: none;
-//         color: black;
-    
-//         &:hover {
-//             color: white;
-//             background-color: #ee6b2f;
-//         }
-    
-//         &::after {
-//             content: '';
-//             position: absolute;
-//             left: 0;
-//             bottom: -8px; // Justera detta värde för att ändra avståndet mellan text och linje
-//             width: 100%;
-//             height: 10px; // Höjden på den liggande linjen
-//             background-color: #ee6b2f;
-//             transform: scaleX(0); // För att initialt gömma linjen
-//             transform-origin: bottom right;
-//             transition: transform 0.9s ease; // Gör övergången smidig
-//         }
-    
-//         &:hover::after {
-//             transform: scaleX(1); // Visa linjen vid hover
-//             transform-origin: bottom left;
-//         }
-//     }
-        
-//         &__ash {
-//             display: inline-block;
-//             position: relative;
-//             text-decoration: none;
-//             color: black;
-            
-//             &:hover {
-//                 color: white;
-//                 background-color: #e6bc2f;
-//             }
-
-//             &::after {
-//                 content: '';
-//                 position: absolute;
-//                 left: 0;
-//                 bottom: -8px; // Justera detta värde för att ändra avståndet mellan text och linje
-//                 width: 100%;
-//                 height: 10px; // Höjden på den liggande linjen
-//                 background-color: #e6bc2f;
-//                 transform: scaleX(0); // För att initialt gömma linjen
-//                 transform-origin: bottom right;
-//                 transition: transform 0.9s ease; // Gör övergången smidig
-//             }
-           
-//             &:hover::after{
-//                 transform: scaleX(1); // Visa linjen vid hover
-//                 transform-origin: bottom left;
-//             }
-            
-//         }
-        
-//         &__pokedex {
-//             display: inline-block;
-//             position: relative;
-//             text-decoration: none;
-//             color: black;
-
-//             &:hover {
-//                 color: white;
-//                 background-color: #4dad5b;
-//             }
-
-//             &::after {
-//                 content: '';
-//                 position: absolute;
-//                 left: 0;
-//                 bottom: -8px; // Justera detta värde för att ändra avståndet mellan text och linje
-//                 width: 100%;
-//                 height: 10px; // Höjden på den liggande linjen
-//                 background-color: #4dad5b;
-//                 transform: scaleX(0); // För att initialt gömma linjen
-//                 transform-origin: bottom right;
-//                 transition: transform 0.9s ease; // Gör övergången smidig
-//             }
-            
-//             &:hover::after {
-//                 transform: scaleX(1); // Visa linjen vid hover
-//                 transform-origin: bottom left;
-//             }
-            
-//         }
-        
-// }
-
 @import '../../App.scss';
 
-$menu-border-color: #f0f0f0; // Grundfärg för den liggande linjen
+$menu-border-color: #f0f0f0; 
 
 %menuItem {
     display: inline-block;
     position: relative;
     text-decoration: none;
     color: black;
+    margin-right: 20px;
 
     &:hover {
         color: white;
@@ -183,16 +17,16 @@ $menu-border-color: #f0f0f0; // Grundfärg för den liggande linjen
         content: '';
         position: absolute;
         left: 0;
-        bottom: -8px; // Justera detta värde för att ändra avståndet mellan text och linje
+        bottom: -8px;
         width: 100%;
-        height: 10px; // Höjden på den liggande linjen
-        transform: scaleX(0); // För att initialt gömma linjen
+        height: 10px;
+        transform: scaleX(0);
         transform-origin: bottom right;
-        transition: transform 0.9s ease; // Gör övergången smidig
+        transition: transform 0.9s ease;
     }
 
     &:hover::after {
-        transform: scaleX(1); // Visa linjen vid hover
+        transform: scaleX(1);
         transform-origin: bottom left;
     }
 }
@@ -209,7 +43,7 @@ $menu-border-color: #f0f0f0; // Grundfärg för den liggande linjen
 
     &__home {
         @extend %menuItem;
-        
+
         &:hover {
             background-color: #919191;
         }
@@ -221,7 +55,7 @@ $menu-border-color: #f0f0f0; // Grundfärg för den liggande linjen
 
     &__about {
         @extend %menuItem;
-        
+
         &:hover {
             background-color: #e3350d;
         }
@@ -233,7 +67,7 @@ $menu-border-color: #f0f0f0; // Grundfärg för den liggande linjen
 
     &__pokemon {
         @extend %menuItem;
-        
+
         &:hover {
             background-color: #ee6b2f;
         }
@@ -243,27 +77,15 @@ $menu-border-color: #f0f0f0; // Grundfärg för den liggande linjen
         }
     }
 
-    &__ash {
+    &__evolution {
         @extend %menuItem;
-        
-        &:hover{
-            background-color: #e6bc2f;
-        }
 
-        &::after {
-            background-color: #e6bc2f;
-        }
-    }
-
-    &__pokedex {
-        @extend %menuItem;
-        
         &:hover {
-            background-color: #4dad5b;
+            background-color: #e6bc2f;
         }
 
         &::after {
-            background-color: #4dad5b;
+            background-color: #e6bc2f;
         }
     }
 }

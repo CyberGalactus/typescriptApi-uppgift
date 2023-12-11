@@ -10,8 +10,7 @@ const Layout = () => {
             <NavLink className={styles["menu__home"]} to="./home">Home</NavLink>
             <NavLink className={styles["menu__about"]} to="./about">About</NavLink>
             <NavLink className={styles["menu__pokemon"]}to="./pokemon">Pokemon</NavLink>
-            <NavLink className={styles["menu__ash"]}to="./ash">Ash</NavLink>
-            <NavLink className={styles["menu__pokedex"]}to="./pokedex">Pokedex</NavLink>
+            <NavLink className={styles["menu__evolution"]}to="./evolution">Evolution Stone</NavLink>
         </div>
         <div className="container">
             <div className="sidebar"></div>

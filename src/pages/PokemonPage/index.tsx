@@ -1,5 +1,4 @@
 import Pokemon from "../../components/Pokemon";
-import { PokemonType } from "../../utils/types";
 
 const PokemonPage = () => {
     return (
